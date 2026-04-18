@@ -1,0 +1,82 @@
+h2 { 
+    font-family: Arial;
+    color: rgb(34, 59, 186);
+}
+.card {
+    background: #fcfafa;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #e8eef5;
+}
+.button {
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.azul {
+    background: rgba(59, 86, 225, 0.15);
+    color: rgb(59, 86, 225);
+}
+
+.rojo {
+    background: rgba(225, 67, 59, 0.15);
+    color: rgb(225, 67, 59);
+}
+
+.verde {
+    background: rgba(41, 86, 200, 0.15);
+    color: rgb(103, 166, 39);
+}
+.btn-filtro {
+    font-weight: bold;
+    padding: 8px 16px;
+    background: rgb(241, 241, 241);
+    color: rgb(51, 51, 51);
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-filtro-activo {
+    padding: 8px 16px;
+    background: rgb(46, 82, 223);
+    color: rgb(251, 252, 251);
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+.badge .badge-categoria {
+    background: rgba(129, 151, 238, 0.5);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #3622b4;
+}
+.badge .badge-prioridad {
+    background: rgba(241, 241, 241, 0.5);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+.badges .badge-prioridad-alta {
+    background: rgba(241, 241, 241, 0.5);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(103, 166, 39);
+}
