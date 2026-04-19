@@ -10,30 +10,19 @@ h2 {
     border: 1px solid #ccc;
 }
 body {
-  font-family: Arial, sans-serif;
-  background: #e8eef5;
+    font-family: Arial, sans-serif;
+    background: #e8eef5;
 }
-.button {
+
+.btn-eliminar {
+    background-color: rgb(249, 0, 0);
+    color: white;
     border: none;
     padding: 6px 14px;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
-
-.azul {
-    background: rgba(59, 86, 225, 0.15);
-    color: rgb(59, 86, 225);
-}
-
-.rojo {
-    background: rgba(225, 67, 59, 0.15);
-    color: rgb(225, 67, 59);
-}
-
-.verde {
-    background: rgba(41, 86, 200, 0.15);
-    color: rgb(103, 166, 39);
-}
+    
 .btn-filtro {
     font-weight: bold;
     padding: 8px 16px;
@@ -45,6 +34,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .btn-filtro-activo {
     padding: 8px 16px;
     background: rgb(46, 82, 223);
@@ -53,30 +43,112 @@ body {
     box-shadow: 0 0 0 2px rgba(0,0,0,0.2);
     transform: scale(1.05);
 }
-.badge .badge-categoria {
-    background: rgba(129, 151, 238, 0.5);
+.badge {
     display: inline-block;
     padding: 2px 8px;
     border-radius: 12px;
     font-size: 12px;
     font-weight: bold;
+}
+.badge.badge-categoria{
+    background: rgba(129, 151, 238, 0.5);
     color: #3622b4;
 }
-.badge .badge-prioridad {
-    background: rgba(241, 241, 241, 0.5);
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
+.badge.prioridad-alta {
+    background: rgba(255, 99, 132, 0.5);
+    color: #b42222;
 }
-.badges .badge-prioridad-alta {
-    background: rgba(241, 241, 241, 0.5);
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 12px;
-    font-weight: bold;
-    color: rgb(103, 166, 39);
+.badge.prioridad-media {
+    background: rgba(247, 123, 46, 0.5);
+    color: #c55c16;
+}
+.badge.prioridad-baja {
+    background: rgba(75, 192, 192, 0.5);
+    color: #227b7b;
+}
+.badge.estado-activo {
+    background: rgba(128, 200, 40, 0.5);
+    color: #6d851d;
+}
+.badge.estado-inactivo {
+    background: rgba(128, 128, 128, 0.5);
+    color: #555555;
+}
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#contenedor-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    grid-template-areas:
+        "titulo titulo"
+        "descripcion descripcion"
+        "badges acciones";
+    gap: 10px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Asignamos cada elemento a su "área" en el Grid */
+.card h3 { 
+    grid-area: titulo; 
+    margin: 0; 
+    color: #1a365d;
+}
+
+.card p { 
+    grid-area: descripcion; 
+    margin: 0 0 10px 0; 
+    color: #4a5568;
+}
+
+.badges { 
+    grid-area: badges; 
+    display: flex; 
+    gap: 10px; 
+    align-items: center; 
+}
+
+.card-actions { 
+    grid-area: acciones; 
+    display: flex; 
+    align-items: flex-end; 
+}
+
+.card:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 600px) {
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulo"
+            "descripcion"
+            "badges"
+            "acciones";
+    }
+    
+    .card-actions {
+        margin-top: 15px;
+        justify-content: flex-end;
+    }
+    
+    .filtros {
+        flex-wrap: wrap; 
+    }
 }
