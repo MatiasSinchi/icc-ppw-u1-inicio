@@ -4,7 +4,7 @@
     margin: 10px 0;
 }
 
-.oculto {
+.oculto {    
     display: none;
 }
 
@@ -21,9 +21,9 @@
 .card-imagen img {
     width: 100px;
     height: 100px;
-    object-fit: cover;
     display: block;
     border-radius: 6px;
+    object-fit: cover;
 }
 
 .card-contenido {
