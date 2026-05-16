@@ -11,7 +11,6 @@ const inputTelefono = document.querySelector('#telefono');
 const passwordStrength = document.querySelector('#password-strength');
 const btnEnviar = document.querySelector('#btn-enviar');
 const btnLimpiar = document.querySelector('#btn-limpiar');
-
 const mensajeEstado = document.querySelector('#mensaje-estado');
 const resultadoRegistro = document.querySelector('#resultado-registro');
 

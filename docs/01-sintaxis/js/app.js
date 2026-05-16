@@ -10,8 +10,8 @@ const materias = ['Web', 'IA', 'Base de Datos'];
 //console.log(nombre);
 
 const direction = {
-    ciudad: "Cuenca",
-    provincia: "Azuay"
+  ciudad: "Cuenca",
+  provincia: "Azuay"
 }
 
 //imprimir en forma de tabla 
@@ -21,20 +21,20 @@ const direction = {
 //const calcularPromedio = (notas) => /elementos;
 
 const getSaludo = (nombre, hora) => {
-    if (hora < 12) 
-        return `buenos dias, ${nombre}`
-    if (hora > 12) 
-        return `buenas tardes, ${nombre}`
-    return `buenas noche, ${nombre}`
+  if (hora < 12)
+    return `buenos dias, ${nombre}`
+  if (hora > 12)
+    return `buenas tardes, ${nombre}`
+  return `buenas noche, ${nombre}`
 }
 const getSaludo2 = (nombre, hora) => {
-    return (hora >= 6 && hora < 12) 
-        ? `Buenos días, ${nombre}` 
-        : (hora >= 12 && hora < 20) 
-            ? `Buenas tardes, ${nombre}` 
-            : `Buenas noches, ${nombre}`;
+  return (hora >= 6 && hora < 12)
+    ? `Buenos días, ${nombre}`
+    : (hora >= 12 && hora < 20)
+      ? `Buenas tardes, ${nombre}`
+      : `Buenas noches, ${nombre}`;
 }
-console.log(getSaludo2('matias',11));
+console.log(getSaludo2('matias', 11));
 
 document.getElementById("nombre").textContent = `${nombre} ${apellido}`;
 document.getElementById("edad").textContent = `Edad: ${edad}`;
